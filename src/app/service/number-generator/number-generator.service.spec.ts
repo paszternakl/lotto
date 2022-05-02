@@ -13,4 +13,12 @@ describe('NumberGeneratorService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should be random number greater then minimum parameter or equal', () => {
+    expect(service.generateRandomNumber(5,10)).toBeGreaterThanOrEqual(5);
+  });
+
+  it('should be random number less then maximum parameter or equal', () => {
+    expect(service.generateRandomNumber(5,10)).toBeLessThanOrEqual(10);
+  });
 });

@@ -52,7 +52,7 @@ export class GameBoardComponent implements OnInit {
     })
   }
 
-  private initRandomNumberArray(number: number) {
+  initRandomNumberArray(number: number): Set<number> {
     const randomNumberSet = new Set<number>();
     while (randomNumberSet.size < number) {
       randomNumberSet.add(this.numberGeneratorService.generateRandomNumber(1, 49));
