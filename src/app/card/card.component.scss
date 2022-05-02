@@ -1,0 +1,82 @@
+
+.board {
+    width: 250px;
+    height: 250px;   
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header {
+    width: 220px;
+    height: 35px;   
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3px;
+    margin-right: 10px;
+}
+
+.tile{
+    width: 28px;
+    height: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid red;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: white;
+    border: 2px solid red;
+    color: red; 
+    height: 30px;
+    justify-content: center;
+    display: flex;
+}
+
+.button-label {
+    margin-top: -5px;
+}
+
+.border-line {
+    margin: 2px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.selected {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.number {
+    z-index: 2;
+    position: absolute;
+}
+
+.cross {
+    color:black;
+    font-weight: 400;
+    font-size:xx-large;
+    margin-top: -14px;
+}
+
+.card-background {
+    font-size: 300px;
+    margin-top: -370px;
+    position: absolute;
+    margin-left: 35px ;
+    color: rgb(70, 63, 63);
+    opacity: 0.5;
+    z-index: -1;
+}
