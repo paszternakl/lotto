@@ -10,6 +10,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastsComponent } from './toaster/toasts.component';
+import { ShuffleSvgComponent } from './svg/shuffle-svg/shuffle-svg.component';
+import { TrashSvgComponent } from './svg/trash-svg/trash-svg.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ToastsComponent } from './toaster/toasts.component';
     GameBoardComponent,
     LoginComponent,
     PageNotFoundComponent,
-    ToastsComponent
+    ToastsComponent,
+    ShuffleSvgComponent,
+    TrashSvgComponent
   ],
   imports: [
     BrowserModule,
