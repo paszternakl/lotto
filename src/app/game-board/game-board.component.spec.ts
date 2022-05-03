@@ -8,9 +8,9 @@ describe('GameBoardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GameBoardComponent ]
+      declarations: [GameBoardComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

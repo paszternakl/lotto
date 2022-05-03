@@ -1,21 +1,20 @@
-
 .board {
     width: 250px;
-    height: 250px;   
+    height: 250px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .header {
     width: 220px;
-    height: 35px;   
+    height: 35px;
     display: flex;
     flex-wrap: wrap;
     margin: 3px;
     margin-right: 10px;
 }
 
-.tile{
+.tile {
     width: 28px;
     height: 28px;
     display: flex;
@@ -29,7 +28,7 @@
 .button {
     background-color: white;
     border: 2px solid red;
-    color: red; 
+    color: red;
     height: 30px;
     justify-content: center;
     display: flex;
@@ -65,9 +64,9 @@
 }
 
 .cross {
-    color:black;
+    color: black;
     font-weight: 400;
-    font-size:xx-large;
+    font-size: xx-large;
     margin-top: -14px;
 }
 
@@ -75,7 +74,7 @@
     font-size: 300px;
     margin-top: -370px;
     position: absolute;
-    margin-left: 35px ;
+    margin-left: 35px;
     color: rgb(70, 63, 63);
     opacity: 0.5;
     z-index: -1;

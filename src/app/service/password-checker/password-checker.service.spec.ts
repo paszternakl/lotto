@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { User } from '../model/user.model';
+import { User } from '../../model/user.model';
 
 import { PasswordCheckerService } from './password-checker.service';
 

@@ -16,16 +16,16 @@ describe('LoginComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ 
+      declarations: [
         LoginComponent
-       ],
+      ],
       imports: [
         BrowserModule,
         ReactiveFormsModule,
         RouterTestingModule
       ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

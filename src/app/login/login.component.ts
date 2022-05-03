@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from '../model/user.model';
-import { PasswordCheckerService } from '../service/password-checker.service';
+import { PasswordCheckerService } from '../service/password-checker/password-checker.service';
 import { ToastService } from '../service/toast/toast.service';
 
 @Component({
@@ -13,7 +13,6 @@ import { ToastService } from '../service/toast/toast.service';
 export class LoginComponent implements OnInit {
 
   users: User[] = [];
-
   loginForm: FormGroup = {} as FormGroup;
 
   constructor(
@@ -21,7 +20,6 @@ export class LoginComponent implements OnInit {
     private passwordChecker: PasswordCheckerService,
     private router: Router,
     private toastService: ToastService
-
   ) { }
 
   ngOnInit(): void {

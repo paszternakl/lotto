@@ -26,10 +26,11 @@
   </div>
   <div class="form-group mt-3">
     <label for="password">Password</label>
-    <input type="text"  data-testid="password" class="form-control" id="password" formControlName="password">
+    <input type="text" data-testid="password" class="form-control" id="password" formControlName="password">
     <small class="text-danger" *ngIf="loginForm.controls['password'].errors?.['required']">
       *Password is required.
     </small>
   </div>
-  <button (click)="login()" data-testid="login-button" class="btn btn-primary mt-4" [disabled]="loginForm.invalid">Login</button>
+  <button (click)="login()" data-testid="login-button" class="btn btn-primary mt-4"
+    [disabled]="loginForm.invalid">Login</button>
 </form>

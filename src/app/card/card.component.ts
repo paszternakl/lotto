@@ -1,8 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-
 import { Card } from '../model/card.model';
 import { CardBoard } from '../model/cardBoard.model';
-
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',

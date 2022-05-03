@@ -1,7 +1,8 @@
-<div class="board"> <!--<div *ngIf="initSub$ | async as array" class="board"> in case of Observable solution -->
+<div class="board">
+    <!--<div *ngIf="initSub$ | async as array" class="board"> in case of Observable solution -->
     <div *ngFor="let cardBoard of lottoCardsArray">
         <app-card (cardIdEmitterForRandomGenerate)="randomNumberGenerate($event)"
-            (cardIdEmitterForDelete)="clearCardBoard($event)" (clicked)="clickTile($event)" [cardBoard]="cardBoard">
+            (cardIdEmitterForDelete)="clearCard($event)" (clicked)="clickTile($event)" [cardBoard]="cardBoard">
         </app-card>
     </div>
 </div>
