@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, Observer, Subscription } from 'rxjs';
 import { Card } from '../model/card.model';
 import { CardBoard } from '../model/cardBoard.model';
 import { NumberGeneratorService } from '../service/number-generator/number-generator.service';
@@ -13,7 +14,8 @@ export class GameBoardComponent implements OnInit {
   cardCount: number[] = [1, 2, 3, 4];
   lottoCardsArray = [] as CardBoard[];
   selectedCardsArray: number[][] = [];
-
+//  initSub$!: Observable<CardBoard[]> in case of initGamePlaywithObservable();
+  
   constructor(
     private numberGeneratorService: NumberGeneratorService
   ) {
@@ -21,6 +23,7 @@ export class GameBoardComponent implements OnInit {
 
   ngOnInit(): void {
     this.initGamePlay();
+ // this.initGamePlaywithObservable();
   }
 
   clickTile(selectedCard: Card) {
@@ -71,5 +74,21 @@ export class GameBoardComponent implements OnInit {
       this.lottoCardsArray.push(cardBoard);
     });
   }
+
+  // init gameplay with ovservable
+/*   private initGamePlaywithObservable() {
+    this.initSub$ = new Observable((observer) => {
+      this.cardCount.forEach(number => {
+        const cardBoard = {} as CardBoard;
+        const card = [] as Card[];
+        for (let index = 1; index < 50; index++) {
+          card.push({ id: index, click: false, cardId: number });
+        };
+        cardBoard.card = card;
+        this.lottoCardsArray.push(cardBoard);
+      });
+      observer.next(this.lottoCardsArray);
+    });
+  } */
 }
 
