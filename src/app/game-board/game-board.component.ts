@@ -14,6 +14,7 @@ export class GameBoardComponent implements OnInit {
   lottoCardsArray = [] as CardBoard[];
   selectedCardsArray: number[][] = [];
   //  initSub$!: Observable<CardBoard[]> in case of initGamePlaywithObservable();
+  selectedNumbers: number[] = [];
 
   constructor(
     private numberGeneratorService: NumberGeneratorService
@@ -46,11 +47,13 @@ export class GameBoardComponent implements OnInit {
   }
 
   calculateResult() {
+    this.selectedNumbers = Array.from(this.initRandomNumberArray(6));
+    this.selectedNumbers.sort((a, b) => a - b);
     this.selectedCardsArray = [];
     this.lottoCardsArray.forEach(cardboard => {
       let selectedCard = [] as Card[];
       selectedCard = cardboard.card.filter(card => card.click === true);
-      this.selectedCardsArray.push(selectedCard.map(card => card.id))
+      this.selectedCardsArray.push(selectedCard.map(card => card.id));
     })
   }
 
@@ -72,6 +75,10 @@ export class GameBoardComponent implements OnInit {
       cardBoard.card = card;
       this.lottoCardsArray.push(cardBoard);
     });
+  }
+
+  checkResult(result: number []) {
+    return [...new Set(this.selectedNumbers.filter(element => result.includes(element)))].sort((a, b) => a - b);
   }
 
   // init gameplay with ovservable

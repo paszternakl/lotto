@@ -9,11 +9,26 @@
 <div class="d-flex justify-content-center">
     <button class="btn btn-danger mt-5" (click)="calculateResult()">Play</button>
 </div>
+<div class="board justify-content-center mt-4">
+    <div *ngFor="let number of selectedNumbers as array">
+        <div class="lucky">
+            {{number}}
+        </div>
+    </div>
+</div>
 <div class="mt-3 panel" *ngFor="let selectedCard of selectedCardsArray; let i = index">
-    <P *ngIf="selectedCard.length === 6"><strong>Panel {{i + 1 }}:</strong> {{selectedCard.join(', ')}}</P>
+    <div *ngIf="selectedCard.length === 6" class="board">
+        <p><strong>Panel {{i + 1 }}: </strong>{{selectedCard.join(', ')}}</p>
+        <span class="matches">matches:</span>
+        <p *ngIf="checkResult(selectedCard).length > 0; else noMatches">{{checkResult(selectedCard).join(', ')}}</p>
+    </div>
     <p *ngIf="selectedCard.length === 0"> <strong>Panel {{i + 1 }}:</strong> empty</p>
     <p *ngIf="selectedCard.length < 6 && selectedCard.length > 0"><strong> Panel {{i + 1 }}:</strong> Error: {{ 6 -
         selectedCard.length}} marks are missing</p>
     <p *ngIf="selectedCard.length > 6"><strong> Panel {{i + 1 }}:</strong> Error: Please remove {{ selectedCard.length -
         6}} marks</p>
 </div>
+
+<ng-template #noMatches>
+    -
+</ng-template>

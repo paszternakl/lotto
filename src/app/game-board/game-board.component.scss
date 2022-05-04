@@ -10,3 +10,20 @@
 .panel {
     font-size: 25px;
 }
+
+.lucky {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    border: 2px solid green;
+    margin-right: 15px;
+    font-size: 50px;
+    justify-content: space-around;
+
+}
+
+.matches {
+    margin-right: 15px;
+    margin-left: 15px;
+    color: green;
+}
